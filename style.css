@@ -1,0 +1,133 @@
+body{
+    background-color: whitesmoke;
+    margin: 0px;
+    width: 100%;
+}
+
+.logo{
+    height: 120px;
+    /* display: block; */
+    /* margin: auto; */
+}
+
+.logo:hover{
+    /* background-color: #111; */
+    transition: 0.4s;
+    opacity: 0.7;
+}
+
+header{
+    background-color: #dbd5d5;
+    /* Logo height-4px */
+    height: 116px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* width: 100%; */
+}
+
+ul.menu{
+    display: flex;
+    flex-flow: row wrap;   
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navigation ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a{
+    display: block;
+    color: rgb(18, 18, 19);
+    text-decoration: none;
+    padding: 12px;
+    font-size: 18px;
+    /* box-sizing: border-box; */
+}
+
+.dropdown{
+    /* position: relative; */
+    /* display: inline-block; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* text-align: center; */
+}
+
+ul.dropdown-menu{
+    position: absolute;
+    background-color: rgb(223, 223, 213);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s;
+    border-radius: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+ul.dropdown-menu>li{
+    text-align: center;
+}
+
+li.dropdown:hover > .dropdown-menu{
+    max-height: 300px;
+}
+
+.navigation a:hover{
+    color: #088178;
+    transition: 0.3s ease;
+}
+
+#navigationMenu{
+    display: none;
+}
+
+#barMenu{
+    display: block;
+    /* flex-grow: 3; */
+    margin: 15px;
+    /* width: 500px; */
+    justify-items: flex-start;
+}
+
+.barDropdown{
+    display: none;
+    position: absolute;
+}
+
+.barDropdown-menu{
+    display: none;
+    
+}
+
+#barMenu:hover > .barDropdown{
+    display: block;
+    position: absolute;
+}
+
+li.bar-dropdown:hover > ul.barDropdown-menu{
+    display: block;
+    position: relative;
+    left: 100px;
+}
+
+#search-form{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+#search-form input{
+    width: 60%;
+    min-width: 50px;
+}
+
+@media screen and (max-width: 855px) {
+    #navigationMenu {
+      display: none;
+    }
+
+    
+}
