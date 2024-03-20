@@ -6,12 +6,9 @@ body{
 
 .logo{
     height: 120px;
-    /* display: block; */
-    /* margin: auto; */
 }
 
 .logo:hover{
-    /* background-color: #111; */
     transition: 0.4s;
     opacity: 0.7;
 }
@@ -23,7 +20,6 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* width: 100%; */
 }
 
 ul.menu{
@@ -45,15 +41,6 @@ ul.menu{
     text-decoration: none;
     padding: 12px;
     font-size: 18px;
-    /* box-sizing: border-box; */
-}
-
-.dropdown{
-    /* position: relative; */
-    /* display: inline-block; */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* text-align: center; */
 }
 
 ul.dropdown-menu{
@@ -79,37 +66,8 @@ li.dropdown:hover > .dropdown-menu{
     transition: 0.3s ease;
 }
 
-#navigationMenu{
-    display: none;
-}
-
 #barMenu{
-    display: block;
-    /* flex-grow: 3; */
-    margin: 15px;
-    /* width: 500px; */
-    justify-items: flex-start;
-}
-
-.barDropdown{
     display: none;
-    position: absolute;
-}
-
-.barDropdown-menu{
-    display: none;
-    
-}
-
-#barMenu:hover > .barDropdown{
-    display: block;
-    position: absolute;
-}
-
-li.bar-dropdown:hover > ul.barDropdown-menu{
-    display: block;
-    position: relative;
-    left: 100px;
 }
 
 #search-form{
@@ -121,7 +79,7 @@ li.bar-dropdown:hover > ul.barDropdown-menu{
 
 #search-form input{
     width: 60%;
-    min-width: 50px;
+    min-width: 30px;
 }
 
 @media screen and (max-width: 855px) {
@@ -129,5 +87,57 @@ li.bar-dropdown:hover > ul.barDropdown-menu{
       display: none;
     }
 
+    @media screen and (max-width: 455px) {
+        .logo{
+            height: 50px;
+        }
+
+        header{
+            height: 46px;
+        }
+    }
+
+    .navigation{
+        order: -1;
+    }
+
+    #barMenu{
+        display: block;
+        /* flex-grow: 3; */
+        margin: 10px;
+        /* width: 500px; */
+        justify-items: flex-start;
+    }
     
+    .barDropdown{
+        display: none;
+        position: absolute;
+        background-color: rgb(223, 223, 213);
+        
+    }
+
+    .bar-dropdown{
+        position: relative;
+    }
+    
+    .barDropdown-menu{
+        display: none;
+        position: absolute;
+        left: 110px;
+        top: 0px;
+        background-color: #088178;
+        width: 100px;
+    }
+
+    .barDropdown-menu a{
+        color: rgb(243, 234, 234);
+    }
+    
+    #barMenu:hover > .barDropdown{
+        display: block;
+    }
+    
+    .bar-dropdown:hover > ul.barDropdown-menu{
+        display: block;
+    }
 }
